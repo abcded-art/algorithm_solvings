@@ -1,0 +1,6 @@
+1. C++ 표준 탬플릿 라이브러리(Standard Template Library)
+(1) Container: 임의 타입의 객체를 보관할 수 있는 컨테이너
+(2) Iterator: 컨테이너에 보관된 원소에 접근할 수 있는 반복자
+(3) Algorithm: 반복자들을 가지고 일련의 작업을 수행하는 알고리즘
+
+2. Iterator
