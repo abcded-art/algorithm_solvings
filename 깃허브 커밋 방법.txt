@@ -1,0 +1,37 @@
+1. 깃허브 레포지토리 생성
+
+2. 로컬 디렉토리 설정
+cd ~/"커밋 시킬 디렉토리 이름"
+
+3. 깃 초기화 및 원격 레포지토리 연결
+ - 현재 디렉토리를 깃 레포지토리로 초기화
+git init
+ - 깃허브에서 생성한 레포지토리의 주소를 복사한 후, 로컬 레포지토리와 연결
+git remote add origin [복사한 레포지토리 URL]
+
+4. 파일 커밋
+ - 모든 파일을 스테이징 영역에 추가
+ git add .
+  - 파일들 커밋
+ git commit -m "Initial commit of my algorithm codes"
+
+5. 깃허브로 푸시
+ - 깃허브 레포지토리로 변경사항 푸시
+ git push -u origin master
+
+
+
+[레포지토리 세팅 후 변경 사항 생길 시]
+1. 변경 사항 확인
+git status
+
+2. 변경 사항 스테이징:
+git add [변경된 파일명]
+또는 변경된 모든 사항을 스테이징하려면:
+git add .
+
+3. 커밋
+git commit -m "변경 사항에 대한 설명"
+
+4. 깃허브로 푸시:
+git push

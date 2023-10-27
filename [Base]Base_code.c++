@@ -11,12 +11,15 @@
 #include <set>
 #include <unordered_set>
 #include <unordered_map>
+#include <cmath>
+#include <climits>
 #define endl "\n"
 using namespace std;
 
-int main(int argc, const char * argv[]) {
+
+int main(){
     ios::sync_with_stdio(false);
     cin.tie(NULL); cout.tie(NULL);
-
-    return 0;
+    
 }
+
