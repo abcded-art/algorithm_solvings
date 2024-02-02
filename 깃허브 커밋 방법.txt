@@ -19,7 +19,8 @@ git remote add origin [복사한 레포지토리 URL]
  - 깃허브 레포지토리로 변경사항 푸시
  git push -u origin master
 
-
+[레포지토리 사항 클론하기]
+git clone [git url]
 
 [레포지토리 세팅 후 변경 사항 생길 시]
 1. 변경 사항 확인
