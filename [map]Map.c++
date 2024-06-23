@@ -14,6 +14,10 @@ int main() {
         cout << it->first << " -> " << it->second << endl;
     }
 
+    for(auto it : m){
+        cout << it.first << "->" << it.second << endl;
+    }
+
     map<int, string, greater<int>> m;
 
     m[5] = "five";
