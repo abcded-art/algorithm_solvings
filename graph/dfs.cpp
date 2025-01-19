@@ -46,7 +46,8 @@ int main(){
             cout << "NULL";
         }
         cout << endl;
-    }*/
+    }
+    */
     
     visited[r] = true;
     visit_order[r] = ++order;
