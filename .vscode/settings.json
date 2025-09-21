@@ -1,5 +1,12 @@
 {
   "files.associations": {
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "vector": "cpp",
+    "initializer_list": "cpp",
+    "iostream": "cpp",
+    "queue": "cpp",
+    "stack": "cpp",
+    "ios": "cpp",
+    "deque": "cpp"
   }
 }

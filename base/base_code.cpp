@@ -15,7 +15,9 @@
 #include <climits>
 #define endl "\n"
 using namespace std;
-
+#define pii pair<int, int>
+#define X first
+#define Y second
 
 int main(){
     ios::sync_with_stdio(false);
