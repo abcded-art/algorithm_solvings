@@ -5,10 +5,8 @@ bool dx[50];
 bool dy[50];
 
 
-
-
 void dfs(int x, int y) {
-
+    
 }
 
 int main(){
