@@ -1,0 +1,4 @@
+{
+    "command": "/opt/homebrew/bin/g++-14",
+    "args": ["-std=gnu++17", "main.cpp"]
+}
