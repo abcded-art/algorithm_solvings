@@ -62,8 +62,11 @@ practice/00_basic/01_pointer_reference/attempt_03.cpp
 
 # BFS 주제에서 현재 마지막 회차의 다음 파일 하나 만들기
 ./coding-test-memory/new-attempt.sh file 05_graph/03_bfs.cpp
+
+# coding-test-memory 디렉터리 안에서는 reference/ 경로를 직접 전달해도 됨
+./new-attempt.sh file ./reference/05_graph/03_bfs.cpp
 ```
 
-`dir`과 `file` 뒤의 경로는 `reference/`를 기준으로 입력합니다. `file` 명령은 해당 주제에 있는 `attempt_*.cpp` 중 가장 큰 번호를 찾아 그다음 회차를 생성합니다.
+`dir`과 `file` 뒤에는 `reference/` 기준 경로 또는 실제 `reference/` 경로를 입력할 수 있습니다. `file` 명령은 해당 주제에 있는 `attempt_*.cpp` 중 가장 큰 번호를 찾아 그다음 회차를 생성합니다.
 
 이미 존재하는 연습 파일은 건너뛰므로 작성한 코드가 비워지거나 덮어써지지 않습니다. 시도 번호는 1 이상의 정수로 입력합니다.

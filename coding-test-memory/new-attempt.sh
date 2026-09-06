@@ -18,7 +18,27 @@ usage() {
   $0 2
   $0 dir 05_graph 3
   $0 file 05_graph/03_bfs.cpp
+  $0 file ./reference/05_graph/03_bfs.cpp
 EOF
+}
+
+reference_candidate_for() {
+    requested=$1
+
+    # 현재 작업 디렉터리를 기준으로 실제 경로가 존재하면 그대로 사용한다.
+    if [ -e "$requested" ]; then
+        printf '%s\n' "$requested"
+        return
+    fi
+
+    # 그 외에는 스크립트 위치와 reference/를 기준으로 해석한다.
+    case "$requested" in
+        /*) printf '%s\n' "$requested" ;;
+        ./reference/*) printf '%s\n' "$SCRIPT_DIR/${requested#./}" ;;
+        reference/*) printf '%s\n' "$SCRIPT_DIR/$requested" ;;
+        ./*) printf '%s\n' "$REFERENCE_DIR/${requested#./}" ;;
+        *) printf '%s\n' "$REFERENCE_DIR/$requested" ;;
+    esac
 }
 
 validate_attempt_number() {
@@ -37,7 +57,7 @@ validate_attempt_number() {
 
 resolve_reference_directory() {
     requested=$1
-    candidate="$REFERENCE_DIR/$requested"
+    candidate=$(reference_candidate_for "$requested")
 
     if [ ! -d "$candidate" ]; then
         echo "reference 디렉터리를 찾을 수 없습니다: $requested" >&2
@@ -56,7 +76,7 @@ resolve_reference_directory() {
 
 resolve_reference_file() {
     requested=$1
-    candidate="$REFERENCE_DIR/$requested"
+    candidate=$(reference_candidate_for "$requested")
 
     if [ ! -f "$candidate" ]; then
         echo "reference C++ 파일을 찾을 수 없습니다: $requested" >&2
