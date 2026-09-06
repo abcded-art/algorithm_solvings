@@ -36,4 +36,14 @@
 *.app
 build/
 
+# Local archives and macOS metadata
+cpp_coding_test_memory.zip
+.DS_Store
+**/.DS_Store
+*.dSYM/
+
+# Practice files are generated locally by coding-test-memory/new-attempt.sh
+coding-test-memory/practice/*
+!coding-test-memory/practice/.gitkeep
+
 # End of https://www.toptal.com/developers/gitignore/api/c++
